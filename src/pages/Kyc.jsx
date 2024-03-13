@@ -39,23 +39,28 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4">
-      <input
-        type="text"
-        name="firstName"
-        value={formData.firstName}
-        onChange={handleChange}
-        placeholder="First Name"
-        className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
-      />
-      <input
-        type="text"
-        name="lastName"
-        value={formData.lastName}
-        onChange={handleChange}
-        placeholder="Last Name"
-        className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
-      />
+    <form
+      onSubmit={handleSubmit}
+      className="p-5 border-2 border-blue-500 rounded-lg"
+    >
+      <div className="flex flex-row gap-5">
+        <input
+          type="text"
+          name="firstName"
+          value={formData.firstName}
+          onChange={handleChange}
+          placeholder="First Name"
+          className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
+        />
+        <input
+          type="text"
+          name="lastName"
+          value={formData.lastName}
+          onChange={handleChange}
+          placeholder="Last Name"
+          className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
+        />
+      </div>
       <input
         type="email"
         name="email"
@@ -64,22 +69,24 @@ const Form = () => {
         placeholder="Email"
         className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
       />
-      <input
-        type="tel"
-        name="mobileNumber"
-        value={formData.mobileNumber}
-        onChange={handleChange}
-        placeholder="Mobile Number"
-        className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
-      />
-      <input
-        type="text"
-        name="dob"
-        value={formData.dob}
-        onChange={handleChange}
-        placeholder="Date of Birth"
-        className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
-      />
+      <div className="flex flex-row gap-5">
+        <input
+          type="tel"
+          name="mobileNumber"
+          value={formData.mobileNumber}
+          onChange={handleChange}
+          placeholder="Mobile Number"
+          className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
+        />
+        <input
+          type="text"
+          name="dob"
+          value={formData.dob}
+          onChange={handleChange}
+          placeholder="Date of Birth"
+          className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
+        />
+      </div>
       <input
         type="text"
         name="panCardNumber"
@@ -100,7 +107,7 @@ const Form = () => {
         type="submit"
         className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
-        Submit
+        Confirm
       </button>
     </form>
   );
@@ -208,18 +215,14 @@ const Kyc = () => {
                         setPicture("");
                       }}
                       className="btn btn-primary"
-                    >
-                      Retake
-                    </button>
+                    ></button>
                     <button
                       onClick={(e) => {
                         e.preventDefault();
                         savePicture(picture);
                       }}
                       className="btn btn-success"
-                    >
-                      Save
-                    </button>
+                    ></button>
                   </div>
                 ) : (
                   <button
