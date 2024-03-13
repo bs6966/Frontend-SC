@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="bg-white py-4 shadow-md">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="text-xl font-bold">LOGO</div>
+        <Link to={"/"}>
+          <div className="text-xl font-bold">LOGO</div>
+        </Link>
+
         <div className="flex space-x-8">
           <a href="#" className="text-gray-600 hover:text-gray-800">
             Payments

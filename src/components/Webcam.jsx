@@ -54,7 +54,7 @@ const Profile = () => {
       </div>
       <div className="">
         {picture !== "" ? (
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-10 mt-10">
             <button
               onClick={(e) => {
                 e.preventDefault();
