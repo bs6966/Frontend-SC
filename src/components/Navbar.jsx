@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white py-4 shadow-md">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to={"/"}>
+        <Link to={"/home"}>
           <div className="text-xl font-bold">LOGO</div>
         </Link>
 
