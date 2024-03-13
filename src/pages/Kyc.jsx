@@ -1,4 +1,6 @@
 import React from "react";
+import Webcam from "react-webcam";
+import Profile from "../components/Webcam";
 
 const Card = ({ title, description, imageUrl }) => {
   return (
@@ -28,12 +30,8 @@ const Kyc = () => {
             <p className="text-gray-700">This is the content of Card 1.</p>
           </div>
         </div>
-        <div className="bg-white rounded-lg shadow-md overflow-hidden w-64 h-max ml-5">
-          <img src={""} alt={"title2"} className="w-full h-48 object-cover" />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold mb-2">Card 2</h3>
-            <p className="text-gray-700">This is the content of Card 2.</p>
-          </div>
+        <div className="bg-white rounded-lg shadow-md overflow-hidden w-64 h-max ml-5 ">
+          <Profile />
         </div>
       </div>
       <div className="flex mb-4">

@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import "@fontsource/poppins"; // Defaults to weight 400
 import "@fontsource/poppins/400.css"; // Specify weight
 import "@fontsource/poppins/400-italic.css"; // Specify weight and style
+import Webcam from './components/Webcam';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path='/kyc' element={<Kyc />} />
+      <Route path='/webcam' element={<Webcam />} />
     </Routes>
     </div>
   );
