@@ -18,11 +18,21 @@ To run the servers locally, follow these steps:
 
 - **Clone this repository**:
 
-```git clone https://github.com/your-repo/online-kyc-platform.git```
+  ```git clone https://github.com/your-repo/online-kyc-platform.git```
 
 - **Install the required dependencies**:
+
+  ```sudo apt install tesseract-ocr```
+  ```pip install -r requirements.txt```
+  ```npm i```
+  
 - **Run the backend server**:
+
+  ```python3 app.py```
+  
 - **In a separate terminal, navigate to the frontend directory and start the development server**:
+
+  ```npm run start```
 
 The frontend server should now be running at `http://localhost:3000`.
 
