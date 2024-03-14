@@ -14,12 +14,6 @@ Traditional KYC methods often involve manual data entry, which can be time-consu
 
 - **User-Friendly Interface**: The platform's interface is designed to be intuitive and easy to navigate, ensuring a seamless experience for users with diverse educational backgrounds.
 
-## Future Scope
-
-- **Signature Verification**: The platform uses Computer Vision to extract the signature from the Customer's PAN Card and verify it with a scanned copy to enable maximum security.
-
-- **Face Verification**: For an extra layer of security, we plan on including a face verification system, where a snapshot of the Customer is taken and verified against the photograph in their identitites.
-  
 ## Getting Started
 
 To run the servers locally, follow these steps:
@@ -83,3 +77,10 @@ The platform's interface is designed to be intuitive and easy to navigate, ensur
 Feel free to explore the platform and provide feedback or report any issues you encounter.
 
 ![Completion Page](./images/9.png)
+
+## Future Scope
+
+- **Signature Verification**: The platform uses Computer Vision to extract the signature from the Customer's PAN Card and verify it with a scanned copy to enable maximum security.
+
+- **Face Verification**: For an extra layer of security, we plan on including a face verification system, where a snapshot of the Customer is taken and verified against the photograph in their identitites.
+  
