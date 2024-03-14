@@ -38,6 +38,8 @@ To run the servers locally, follow these steps:
 
 The frontend server should now be running at `http://localhost:3000`.
 
+The backend server should now be running at `http://localhost:5000`.
+
 ## Screenshots and Demos
 
 Here are some screenshots and demos showcasing the features and functionality of the online interactive video KYC platform:
