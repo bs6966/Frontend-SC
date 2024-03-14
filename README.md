@@ -83,4 +83,14 @@ Feel free to explore the platform and provide feedback or report any issues you 
 - **Signature Verification**: The platform uses state-of-the-art image manipulation techniques to extract the signature from the Customer's PAN Card and verify it with a scanned copy to enable maximum security.
 
 - **Face Verification**: For an extra layer of security, we plan on including a face verification system, where a snapshot of the Customer is taken and verified against the photograph in their identitites.
+
+## Drive Link to Platform Demo
+
+https://drive.google.com/file/d/14hpSluk9iI6IiPSmAXNktRxaui9sfG_J/view?usp=sharing
+
+## Team members
+1. Nikhil Menon
+2. Barhamdeep Singh
+3. Nitya Mohta
+4. Rohan Sonthalia
   
