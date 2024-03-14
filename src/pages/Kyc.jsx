@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AI from "../images/WhatsApp Image 2024-03-13 at 6.14.10 PM.jpeg";
 import Webcam from "react-webcam";
+import { Link } from "react-router-dom";
 
 const Card = ({ title, description, imageUrl }) => {
   return (
@@ -49,15 +50,7 @@ const Form = () => {
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
-          placeholder="First Name"
-          className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
-        />
-        <input
-          type="text"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-          placeholder="Last Name"
+          placeholder="Full Name"
           className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
         />
       </div>
@@ -103,12 +96,15 @@ const Form = () => {
         className="mb-4 block w-full px-4 py-2 border border-gray-300 rounded"
         rows="4"
       ></textarea>
-      <button
-        type="submit"
-        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Confirm
-      </button>
+      <Link to={"/occupation"}>
+        {" "}
+        <button
+          type="submit"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Confirm
+        </button>
+      </Link>
     </form>
   );
 };
@@ -150,7 +146,6 @@ const Kyc = () => {
   const [showForm, setShowForm] = useState(false);
   const handleConfirmClick = () => {
     setShowForm(true);
-    savePicture(picture);
   };
 
   const handlePhoto = (e) => {
@@ -161,6 +156,7 @@ const Kyc = () => {
     } else {
       // If no picture is captured yet, capture a new one
       capture();
+      savePicture(picture);
     }
   };
 
@@ -264,7 +260,7 @@ const Kyc = () => {
             className="border-2 bg-white hover:bg-gray-400 text-blue-600 border-blue-600 font-bold py-2 px-6 rounded mr-2"
             onClick={handlePhoto}
           >
-            {picture !== "" ? "Retake" : "Take Photo"}
+            {picture !== "" ? "Next" : "Take Photo"}
           </button>
         )}
         <button

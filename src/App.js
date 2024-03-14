@@ -9,12 +9,14 @@ import "@fontsource/poppins/400.css"; // Specify weight
 import "@fontsource/poppins/400-italic.css"; // Specify weight and style
 import Webcam from './components/Webcam';
 import Language from './pages/Language';
+import Occupation from './pages/Occupation';
 
 function App() {
   return (
     <div>
     <Navbar />
     <Routes>
+      <Route path='/occupation' element={<Occupation />} />
       <Route path='/' element={<Language />} />
       <Route path="/home" element={<Home/>} />
       <Route path='/kyc' element={<Kyc />} />
