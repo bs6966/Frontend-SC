@@ -18,12 +18,14 @@ To run the servers locally, follow these steps:
 
 - **Clone this repository**:
 
-  ```git clone https://github.com/your-repo/online-kyc-platform.git```
+  ```git clone https://github.com/bs6966/SC-Hack_TensionFlow.git```
 
 - **Install the required dependencies**:
 
   ```sudo apt install tesseract-ocr```
+  
   ```pip install -r requirements.txt```
+  
   ```npm i```
   
 - **Run the backend server**:
