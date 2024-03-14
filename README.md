@@ -16,7 +16,8 @@ Traditional KYC methods often involve manual data entry, which can be time-consu
 
 To run the servers locally, follow these steps:
 
-1. Clone the repository: ```git clone https://github.com/your-repo/online-kyc-platform.git```
+- **Clone this repository**:
+  ```git clone https://github.com/your-repo/online-kyc-platform.git```
 2. Install the required dependencies:
 3. Run the backend server:
 4. In a separate terminal, navigate to the frontend directory and start the development server:
