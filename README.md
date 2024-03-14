@@ -1,70 +1,42 @@
-# Automated KYC - TensionFlow
+# Online Interactive Video KYC Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the code for an online interactive video KYC (Know Your Customer) platform that simplifies the KYC process using modern technologies. The platform utilizes optical character recognition (OCR) to extract data from Aadhar cards and PAN cards, incorporates a voice assistant for a hands-free experience, and provides a user-friendly interface accessible to individuals with varying educational backgrounds.
 
-## Available Scripts
+## Why This Platform is Better
 
-In the project directory, you can run:
+Traditional KYC methods often involve manual data entry, which can be time-consuming, error-prone, and challenging for individuals with limited literacy or technology skills. Our online interactive video KYC platform addresses these issues by leveraging advanced technologies:
 
-### `npm start`
+- **OCR Integration**: The platform employs OCR to automatically extract relevant information from Aadhar and PAN cards, eliminating the need for manual data entry and reducing the risk of errors.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Voice Assistant**: A built-in voice assistant enables users to interact with the platform using voice commands, making the process more accessible and inclusive for individuals who may have difficulty with typed inputs.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User-Friendly Interface**: The platform's interface is designed to be intuitive and easy to navigate, ensuring a seamless experience for users with diverse educational backgrounds.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the servers locally, follow these steps:
 
-### `npm run build`
+1. Clone the repository:
+2. Install the required dependencies:
+3. Run the backend server:
+4. In a separate terminal, navigate to the frontend directory and start the development server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The frontend server should now be running at `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots and Demos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Here are some screenshots and demos showcasing the features and functionality of the online interactive video KYC platform:
 
-### `npm run eject`
+### OCR Integration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The platform can extract information from Aadhar and PAN cards using OCR technology, eliminating the need for manual data entry.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Voice Assistant
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Users can interact with the platform using voice commands, thanks to the integrated voice assistant, making the process more accessible and inclusive.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### User-Friendly Interface
 
-## Learn More
+The platform's interface is designed to be intuitive and easy to navigate, ensuring a seamless experience for users with diverse educational backgrounds.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore the platform and provide feedback or report any issues you encounter.
