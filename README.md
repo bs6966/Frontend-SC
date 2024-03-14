@@ -6,12 +6,14 @@ This repository contains the code for an online interactive video KYC (Know Your
 
 Traditional KYC methods often involve manual data entry, which can be time-consuming, error-prone, and challenging for individuals with limited literacy or technology skills. Our online interactive video KYC platform addresses these issues by leveraging advanced technologies:
 
-- **OCR Integration**: The platform employs OCR to automatically extract relevant information from Aadhar and PAN cards, eliminating the need for manual data entry and reducing the risk of errors.
+- **OCR Integration**: The platform employs OCR to automatically extract basic User Information such as Name, DOB, PAN Number and Aadhar Number from the relevant Government Identities to eradicate any discrepancies, eliminating the need for manual data entry and reducing the risk of errors.
 
-- **Voice Assistant**: A built-in voice assistant enables users to interact with the platform using voice commands, making the process more accessible and inclusive for individuals who may have difficulty with typed inputs.
+- **Multilingual Voice Assistant**: A built-in voice assistant enables users to interact with the platform using voice commands in their preferred language, making the process more accessible and inclusive for individuals who may have difficulty with typed inputs.
+
+- **Speech Recognition**: The system allows users to converse verbally, removing the need for written answers, and is optimised to handle Indian accents.
 
 - **User-Friendly Interface**: The platform's interface is designed to be intuitive and easy to navigate, ensuring a seamless experience for users with diverse educational backgrounds.
-
+  
 ## Getting Started
 
 To run the servers locally, follow these steps:
