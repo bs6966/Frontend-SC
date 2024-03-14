@@ -7,7 +7,9 @@ app = Flask(__name__)
 
 @app.route('/aadhar_ocr', methods=['POST'])
 def aadhar_ocr():
-    file = request.files['image']
+    if 'picture' not in request.files:
+        return jsonify({"Error": "No file in part"})
+    file = request.files['picture']
     img_path = f'tmp/{file.filename}'
     file.save(img_path)
 
@@ -23,7 +25,9 @@ def aadhar_ocr():
 
 @app.route('/pan_ocr', methods=['POST'])
 def pan_ocr():
-    file = request.files['image']
+    if 'picture' not in request.files:
+        return jsonify({"Error": "No file in part"})
+    file = request.files['picture']
     img_path = f'tmp/{file.filename}'
     file.save(img_path)
 
