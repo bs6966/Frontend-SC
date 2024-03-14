@@ -13,6 +13,12 @@ Traditional KYC methods often involve manual data entry, which can be time-consu
 - **Speech Recognition**: The system allows users to converse verbally, removing the need for written answers, and is optimised to handle Indian accents.
 
 - **User-Friendly Interface**: The platform's interface is designed to be intuitive and easy to navigate, ensuring a seamless experience for users with diverse educational backgrounds.
+
+## Future Scope
+
+- **Signature Verification**: The platform uses Computer Vision to extract the signature from the Customer's PAN Card and verify it with a scanned copy to enable maximum security.
+
+- **Face Verification**: For an extra layer of security, we plan on including a face verification system, where a snapshot of the Customer is taken and verified against the photograph in their identitites.
   
 ## Getting Started
 
