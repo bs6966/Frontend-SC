@@ -56,12 +56,30 @@ Here are some screenshots and demos showcasing the features and functionality of
 
 The platform can extract information from Aadhar and PAN cards using OCR technology, eliminating the need for manual data entry.
 
+![Landing Page (Hindi)](./images/1.png)
+
+![Landing Page (English)](./images/2.png)
+
+![KYC Details in Preferred Language](./images/3.png)
+
+![Demo of Aadhar Details Capture](./images/4.png)
+
+![Demo of Pan Details Capture](./images/5.png)
+
+![Autofill Details Demo](./images/6.png)
+
 ### Voice Assistant
 
 Users can interact with the platform using voice commands, thanks to the integrated voice assistant, making the process more accessible and inclusive.
+
+![Voice Assistant asks for Income Range](./images/7.png)
+
+![Voice Assistant asks for Job Profile](./images/8.png)
 
 ### User-Friendly Interface
 
 The platform's interface is designed to be intuitive and easy to navigate, ensuring a seamless experience for users with diverse educational backgrounds.
 
 Feel free to explore the platform and provide feedback or report any issues you encounter.
+
+![Completion Page](./images/9.png)
