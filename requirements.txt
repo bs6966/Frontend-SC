@@ -1,3 +1,5 @@
 cv2
 pytesseract
 requests
+SpeechRecognition
+pyaudio
