@@ -14,11 +14,15 @@ cloudinary.config(
     api_secret="dHWcShm4LHxlv3wd6mRgAtZzdJ4"
 )
 
-# Upload an image to Cloudinary
 def upload_image(image_file):
     try:
         upload_data = cloudinary.uploader.upload(image_file, resource_type="auto")
-        return upload_data
+        if isinstance(upload_data, list) or isinstance(upload_data, dict):
+            # If upload_data is a list or dict, it means the upload was successful
+            return upload_data
+        else:
+            print(f"Unexpected upload response: {upload_data}")
+            return None
     except Exception as e:
         print(f"Error uploading image: {e}")
         return None
@@ -26,8 +30,8 @@ def upload_image(image_file):
 # Fetch the path of the uploaded image
 def fetch_image_path(public_id):
     try:
-        resource = cloudinary.api.resource(public_id)
-        image_path = resource['secure_url']
+        resource = cloudinary.utils.cloudinary_url(public_id, resource_type="image")[0]
+        image_path = resource
         return image_path
     except Exception as e:
         print(f"Error fetching image path: {e}")
@@ -47,7 +51,6 @@ def aadhar_ocr():
     public_id = upload_result['public_id']
     img_path = fetch_image_path(public_id)
 
-    # img_path = "/Users/rohansonthalia/Downloads/Frontend-SC-main/IMG_0956.jpg"
     aadhar_ocr = ocr.Aadhar_OCR(img_path)
     data = aadhar_ocr.extract_data()
 
@@ -72,7 +75,6 @@ def pan_ocr():
     public_id = upload_result['public_id']
     img_path = fetch_image_path(public_id)
 
-    # img_path = "/Users/rohansonthalia/Downloads/Frontend-SC-main/unsharpen.jpg"
     pan_ocr = ocr.PAN_OCR(img_path)
     pan_no = pan_ocr.extract_data()
 

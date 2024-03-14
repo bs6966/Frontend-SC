@@ -4,6 +4,8 @@ import cv2
 import pytesseract
 
 def extract_text_from_image(image_path, api_key):
+    cloud_url = image_path
+    response = requests.get(cloud_url)
     # OCR.space API endpoint
     api_endpoint = "https://api.ocr.space/parse/image"
     
@@ -14,11 +16,12 @@ def extract_text_from_image(image_path, api_key):
     }
 
     # Read image file
-    with open(image_path, "rb") as image_file:
+    with open("image.jpg", "wb") as f:
+        f.write(response.content)
         
-        # Send POST request to OCR.space API
-        response = requests.post(api_endpoint,
-                                 files={image_path: image_file},
+    files = {"image": open("image.jpg", "rb")}
+    response = requests.post(api_endpoint,
+                                 files=files,
                                  data=payload)
     
     # Parse response JSON
@@ -62,8 +65,16 @@ class Aadhar_OCR:
         self.img_name = img_path
     
     def extract_data(self):
+
+        response = requests.get(self.img_name)
+        if response.status_code == 200:
+            # Load the image data into a numpy array
+            image_data = np.frombuffer(response.content, np.uint8)
+            # Decode the image data using OpenCV
+            img = cv2.imdecode(image_data, cv2.IMREAD_COLOR)
+
         # Reading the image, extracting text from it, and storing the text into a list.
-        img = cv2.imread(self.img_name)
+        # img = cv2.imread(self.img_name)
         gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         _, threshold_image = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
         text = pytesseract.image_to_string(threshold_image)
@@ -137,8 +148,15 @@ class PAN_OCR:
         self.img_name = img_path
     
     def extract_data(self):
+
+        response = requests.get(self.img_name)
+        if response.status_code == 200:
+            # Load the image data into a numpy array
+            image_data = np.frombuffer(response.content, np.uint8)
+            # Decode the image data using OpenCV
+            img = cv2.imdecode(image_data, cv2.IMREAD_COLOR)
+
         # Reading the image, extracting text from it, and storing the text into a list.
-        img = cv2.imread(self.img_name)
         gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         denoised_image = cv2.GaussianBlur(gray_image, (5, 5), 0)
         # _, threshold_image = cv2.threshold(gray_image, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
@@ -170,8 +188,21 @@ class PAN_OCR:
             if i.isalnum():
                 self.user_pan_no = self.user_pan_no + i
             else:
-                continue
-
-        api_key = "K89709702488957"
-        print(extract_text_from_image(self.img_name, api_key))   
+                continue 
         return self.user_pan_no
+
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.utils
+import cv2
+import numpy as np
+
+cloudinary.config(
+    cloud_name="dnvllz2vp",
+    api_key="494111954798794",
+    api_secret="dHWcShm4LHxlv3wd6mRgAtZzdJ4"
+)
+
+# obj = Aadhar_OCR("http://res.cloudinary.com/dnvllz2vp/image/upload/oybked46vm79vh9webpa")
+# print(obj.extract_data())
