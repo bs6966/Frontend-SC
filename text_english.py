@@ -27,7 +27,7 @@ def english():
         except sr.RequestError as e:
             print("Could not request results; {0}".format(e))
 text_english=english()
-class hindi(Resource): 
+class english(Resource): 
 	def get(self): 
 		data={ 
 			'text':text_english,
