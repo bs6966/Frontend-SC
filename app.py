@@ -83,6 +83,64 @@ def pan_ocr():
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({'status': 'OK'})
+    
+def english():
+r = sr.Recognizer()
+b=True
+while b==True:
+    with sr.Microphone() as source:
+        print("State your answer")
+        r.adjust_for_ambient_noise(source, duration=1)
+    audio = r.listen(source)
+        try:
+            print("Recognizing...")
+            text = r.recognize_google(audio) 
+            b=False
+            return text
+        except sr.UnknownValueError:
+            print("Could not understand audio")
+        except sr.RequestError as e:
+            print("Could not request results; {0}".format(e))
+text_english=english()
+class english(Resource): 
+	def get(self): 
+		data={ 
+			'text':text_english,
+		} 
+		return data 
+
+api.add_resource(english,'/english') 
+
+def hindi():
+    r = sr.Recognizer()
+    b=True
+    # Capture audio from the microphonE
+    while b==True:
+        with sr.Microphone() as source:
+            print("State your answer")
+            r.adjust_for_ambient_noise(source, duration=1)
+            audio = r.listen(source)
+
+        # Perform speech recognition
+        try:
+            print("Recognizing...")
+            text = r.recognize_google(audio, language='hi-In') 
+            b=False
+            return text
+        except sr.UnknownValueError:
+            print("Could not understand audio")
+        except sr.RequestError as e:
+            print("Could not request results; {0}".format(e))
+text_hindi=hindi()
+class hindi(Resource): 
+	def get(self): 
+		data={ 
+			'text':text_hindi,
+		} 
+		return data 
+
+api.add_resource(hindi,'/hindi') 
+
 
 if __name__ == '__main__':
     app.run(debug=True)
