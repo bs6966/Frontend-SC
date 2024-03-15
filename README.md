@@ -2,6 +2,8 @@
 
 This repository contains the code for an online interactive video KYC (Know Your Customer) platform that simplifies the KYC process using modern technologies. The platform utilizes optical character recognition (OCR) to extract data from Aadhar cards and PAN cards, incorporates a voice assistant for a hands-free experience, and provides a user-friendly interface accessible to individuals with varying educational backgrounds.
 
+- **Demonstration**: A demo video has been included : TensionFlow Demo.mp4
+  
 ## Why This Platform is Better
 
 Traditional KYC methods often involve manual data entry, which can be time-consuming, error-prone, and challenging for individuals with limited literacy or technology skills. Our online interactive video KYC platform addresses these issues by leveraging advanced technologies:
